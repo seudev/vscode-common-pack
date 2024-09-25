@@ -1,0 +1,64 @@
+{
+  "name": "vscode-common-pack",
+  "displayName": "Seudev's VSCode common pack",
+  "description": "The Seudev's Visual Studio Code common pack",
+  "version": "0.0.1",
+  "author": "Thomás Sousa Silva <thomassousa.dev>",
+  "publisher": "Seudev",
+  "icon": "images/logo.png",
+  "homepage": "https://github.com/seudev/vscode-common-pack",
+  "license": "Apache-2.0",
+  "engines": {
+    "vscode": "^1.93.0"
+  },
+  "categories": [
+    "Extension Packs"
+  ],
+  "extensionPack": [
+    "Seudev.vscode-configs",
+    "streetsidesoftware.code-spell-checker",
+    "donjayamanne.githistory",
+    "mhutchie.git-graph",
+    "eamodio.gitlens",
+    "alefragnani.Bookmarks",
+    "adpyke.codesnap",
+    "bierner.color-info",
+    "bierner.markdown-preview-github-styles",
+    "bierner.markdown-mermaid",
+    "bierner.markdown-emoji",
+    "bierner.markdown-checkbox",
+    "ms-azuretools.vscode-docker",
+    "redhat.vscode-yaml",
+    "redhat.vscode-xml",
+    "ms-vscode.live-server",
+    "MS-vsliveshare.vsliveshare",
+    "humao.rest-client",
+    "johnpapa.vscode-peacock",
+    "usernamehw.errorlens",
+    "helixquar.randomeverything",
+    "BriteSnow.vscode-toggle-quotes",
+    "DavidAnson.vscode-markdownlint",
+    "quicktype.quicktype",
+    "vsls-contrib.codetour",
+    "Gruntfuggly.todo-tree",
+    "esbenp.prettier-vscode"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/seudev/vscode-common-pack.git"
+  },
+  "bugs": {
+    "url": "https://github.com/seudev/vscode-common-pack/issues"
+  },
+  "keywords": [
+    "pack",
+    "vscode",
+    "Seudev"
+  ],
+  "scripts": {
+    "build-readme": "node src/ReadmeBuilder.js",
+    "build": "npm run build-readme && vsce package",
+    "prepublishOnly": "npm run build",
+    "publish": "vsce publish -p $ACCESS_TOKEN"
+  }
+}
